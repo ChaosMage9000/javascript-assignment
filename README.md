@@ -1,2 +1,2 @@
-# javascript-assingment
+# javascript-assignment
 THIS IS A TEST

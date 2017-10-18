@@ -1,0 +1,90 @@
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+This is intended as a quick reference and showcase. For more complete info, see John Gruber's original spec and the Github-flavored Markdown info page.
+
+Headers
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+
+H1
+H2
+H3
+H4
+H5
+H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+Alt-H2
+
+lists
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+
+    1.First ordered list item
+    2.Another item
+
+    -Unordered sub-list.
+
+    1.Actual numbers don't matter, just that it's a number
+
+    2.Ordered sub-list
+
+    3.And another item.
+
+    You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+    To have a line break without a paragraph, you will need to use two trailing spaces.
+    Note that this line is separate, but within the same paragraph.
+    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+    -Unordered list can use asterisks
+
+    -Or minuses
+
+    -Or pluses
+
+https://www.w3schools.com/tags/ref_urlencode.asp
+
+URL - Uniform Resource Locator
+web browsers request by using the url the url is the searched bar up the top of your browser(example:google.com)
+
+URL Encoding (Percent Encoding)
+Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.
+
+URL EncSince URLs
+In JavaScript, PHP, and ASP there are functions that can be used to URL encode a string.
+
+In JavaScript you can use the encodeURI() function.
+
+PHP has the rawurlencode() function, and ASP has the Server.URLEncode() function.
+
+

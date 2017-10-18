@@ -1,0 +1,195 @@
+<html>
+<head>
+
+<script>
+var my_name="jordan" ;
+
+console.log("Hello " +my_name);
+
+var my_value = 3;
+if (my_value===0){
+	console.log ("my_value = 0");
+} else if (my_value === 1){
+         console.log ("my_value = 1");
+} else if (my_value === 2){
+	console.log ("Unable to determine " + my_value);
+}
+
+switch(my_value) {
+    case 0:
+        console.log ("my_value = 0");
+        break;
+    case 1:
+        console.log ("my_value = 1");
+        break;
+    default:
+	console.log ("my_value = unknown");
+        break;
+}
+function my_adder(my_parameter){
+	console.log("Called with parameter " + my_parameter);
+        my_parameter = my_parameter + 1;
+	console.log("New value" + my_parameter);
+        return my_parameter;
+}
+
+function myfunction(){
+	var data = document.getElementById("mytextarea").value
+	console.log(data);
+	document.getElementById("mytextarea2").value= data;
+ }
+
+function basic_for_loop(){
+	for (var my_iterator = 0; my_iterator < 10; my_iterator = my_iterator + 1){
+		console.log("Iterator Value: " + my_iterator);
+		if (my_iterator === 8){
+			console.log("IM IN HERE!");
+//			my_iterator = 1;
+ 		}
+		
+	}
+}
+
+function basic_while_loop(){
+	var counter = 0;
+	while (counter !== 15){
+		counter = counter + 1;
+		console.log("While Loop Counter: " + counter);
+	}
+}
+
+function my_for_loop_iterator(){
+	var input_string = "This is my input string!!!!";
+	var output_string = "";
+	for (var i = 0; i < input_string.length; i += 1){
+		output_string = output_string + input_string[i];
+		console.log("Output string is currently: " + output_string);
+		console.log("Iteration_loop: " + i + " Current_Character" + input_string[i]);
+	}
+
+	console.log(output_string);
+}
+
+function convert_to_url_encoding (character){
+	switch(character){
+		case "!":
+			return "%21" ;
+			break;
+		case "\"":
+			return "%22" ;
+			break;
+		case "#":
+			return "%23" ;
+			break;
+		case "$":
+			return "%24" ;
+			break;
+		case "%":
+			return "%25" ;
+			break;
+		case "&":
+			return "%26" ;
+			break;
+		case "'":
+			return "%27" ;
+			break;
+		case "(":
+			return "%28" ;
+			break;
+		case ")":
+			return "%29" ;
+			break;
+		case "*":
+			return "%2A" ;
+			break;
+		case "+":
+			return "%2B" ;
+			break;
+		case ",":
+			return "%2C" ;
+			break;
+		case "-":
+			return "%2D" ;
+			break;
+		case ".":
+			return "%2E" ;
+			break;
+		case "/":
+			return "%2F" ;
+			break;
+		case ":":
+			return "%3A" ;
+			break;
+		case ";":
+			return "%3B" ;
+			break;
+		case "<":
+			return "%3C" ;
+			break;
+		case "=":
+			return "%3D" ;
+			break;
+		case ">":
+			return "%3E" ;
+			break;
+		case "?":
+			return "%3F" ;
+			break;
+		case "@":
+			return "%40" ;
+			break;
+		case "[":
+			return "%5B" ;
+			break;
+		case "\\":
+			return "%5C" ;
+			break;
+		case "]":
+			return "%5D" ;
+			break;
+		case "^":
+			return "%5E" ;
+			break;
+		case "_":
+			return "%5F" ;
+			break;
+		case "`":
+			return "%60" ;
+			break;
+		case "{":
+			return "%7B" ;
+			break;
+		case "|":
+			return "%7C" ;
+			break;
+		case "}":
+			return "%7D" ;
+			break;
+		case "~":
+			return "%7E" ;
+			break;
+		case " ":
+			return "%7F" ;
+			break;
+		case "`":
+			return "%80" ;
+			break;
+		default: 
+			return character;
+}}
+console.log("aaaa");
+</script>
+
+</head>
+
+<body>
+	<textarea id="mytextarea" onchange="myfunction()" onkeydown="myfunction()">
+
+</textarea>
+
+	<textarea id="mytextarea2" onchange="myfunction()" onkeyup="myfunction()">
+
+</textarea>
+
+</body>
+</html>

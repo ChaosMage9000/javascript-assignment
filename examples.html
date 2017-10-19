@@ -127,9 +127,19 @@ function my_for_loop_iterator(input_string){
 // my_for_loop_iterator("Hello World!!!");
 
 function myfunction(){
-	var input_string = document.getElementById("mytextarea").value;
-	input_string= my_for_loop_iterator(input_string)
-	document.getElementById("mytextarea2").value = input_string;
+	
+	var encoding_type = document.getElementById("drop_down").value; // document is getting referece for the value
+	if (encoding_type === "URL") {
+		var input_string = document.getElementById("mytextarea").value;
+		input_string= my_for_loop_iterator(input_string);
+		document.getElementById("mytextarea2").value = input_string;
+	}
+	if (encoding_type === "BINARY") {
+	// TODO
+	
+	
+	
+}	
 	return
 }
 
@@ -145,6 +155,17 @@ function myfunction(){
 	<textarea id="mytextarea2" onchange="myfunction()" onkeyup="myfunction()">
 
 </textarea>
+<p><strong>choose your decrytion type.<br>
+Then put in your code.</strong></p>
+
+<select id="drop_down"+value=URL >
+          <option value="URL">URL</option>
+          <option value="BINARY">BINARY</option>
+</select>
+
+
+
+
 
 </body>
 </html>

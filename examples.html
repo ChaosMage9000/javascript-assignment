@@ -1,66 +1,9 @@
 <html>
 <head>
-
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <script>
-function get_char_at_index(my_string, index){
-	// var my_string = "Hello World"
-	return my_string[index];
-}
 
-function iterate_through_string (my_string){
-	// var my_string = "Hello World"
-	// my_string.length == 10
-	for(var i = 0; i < my_string.length; i += 1){
-		console.log(i + ": " + get_char_at_index(my_string, i));
-	}
-}
-// iterate_through_string("Hello world I am a really long string too long to count");
-
-
-function myfunction(){
-	var data = document.getElementById("mytextarea").value
-	console.log(data);
-	document.getElementById("mytextarea2").value= data;
- }
-
-function basic_for_loop(){
-	for (var my_iterator = 0; my_iterator < 10; my_iterator = my_iterator + 1){
-		console.log("Iterator Value: " + my_iterator);
-		if (my_iterator === 8){
-			console.log("IM IN HERE!");
-//			my_iterator = 1;
- 		}
-		
-	}
-}
-
-function basic_while_loop(){
-	var counter = 0;
-	while (counter !== 15){
-		counter = counter + 1;
-		console.log("While Loop Counter: " + counter);
-	}
-}
-
-function my_for_loop_iterator(){
-	var input_string = "!@#$%^&*()This is my input string!!!!";
-	var output_string = "";
-	for (var i = 0; i < input_string.length; i += 1){
-		// var x = 1;
-		// x = my_adder(x);
-		console.log("-------------------------");
-		console.log("Iteration_loop: " + i);
-		var current_char = input_string[i];
-		console.log("current_char: " + current_char)
-		current_char = convert_to_url_encoding(current_char);
-		output_string = output_string + current_char;
-		console.log("Output string is currently: " + output_string);
-		
-	}
-	console.log("*** Finished Loop ***");
-	console.log(output_string);
-}
-my_for_loop_iterator();
 function convert_to_url_encoding(character){
 	switch(character){
 		case "!":
@@ -160,7 +103,7 @@ function convert_to_url_encoding(character){
 			return "%7E" ;
 			break;
 		case " ":
-			return "%7F" ;
+			return "%20" ;
 			break;
 		case "`":
 			return "%80" ;
@@ -168,14 +111,34 @@ function convert_to_url_encoding(character){
 		default: 
 			return character;
 }}
-console.log("aaaa");
+
+
+function my_for_loop_iterator(input_string){
+//	var input_string = "!@#$%^&*()This is my input string!!!!";
+	var output_string = "";
+	for (var i = 0; i < input_string.length; i += 1){
+		var current_char = input_string[i];
+		current_char = convert_to_url_encoding(current_char);
+		output_string = output_string + current_char;	
+	}
+	console.log(output_string);
+	return output_string;
+}
+// my_for_loop_iterator("Hello World!!!");
+
+function myfunction(){
+	var input_string = document.getElementById("mytextarea").value;
+	input_string= my_for_loop_iterator(input_string)
+	document.getElementById("mytextarea2").value = input_string;
+	return
+}
 
 </script>
 
 </head>
 
 <body>
-	<textarea id="mytextarea" onchange="myfunction()" onkeydown="myfunction()">
+	<textarea id="mytextarea" onchange="myfunction()" onkeyup="myfunction()">
 
 </textarea>
 

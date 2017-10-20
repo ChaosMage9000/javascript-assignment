@@ -1,11 +1,305 @@
 <html>
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta content="utf-8" http-equiv="encoding">
 <script>
+// ascii_to_binary (ascii_to_binary) 
+// ascii_to_url (ascii_to_url)
+// binary_to_ascii  
+// url_to_binary
 
-function binary_encode_character(character){
-	// Converts an ASCII character to a binary encoded character.
+function binary_to_ascii(character){
+	// Converts an ascii character to a binary encoded character.
+	switch(character){
+		case "00100000":
+			return " ";
+			break;
+		case "00100001":
+			return "!";
+			break;
+		case "00100010":
+			return "\"";
+			break;
+		case "00100011":
+			return "#";
+			break;
+		case "00100100":
+			return "$";
+			break;
+		case "00100101":
+			return "%";
+			break;
+		case "00100110":
+			return "&";
+			break;
+		case "00100111":
+			return "'";
+			break;
+		case "00101000":
+			return "(";
+			break;
+		case "00101001":
+			return ")";
+			break;
+		case "00101010":
+			return "*";
+			break;
+		case "00101011":
+			return "+";
+			break;
+		case "00101100":
+			return ",";
+			break;
+		case "00101101":
+			return "-";
+			break;
+		case "00101110":
+			return ".";
+			break;
+		case "00101111":
+			return "/";
+			break;
+		case "00110000":
+			return "0";
+			break;
+		case "00110001":
+			return "1";
+			break;
+		case "00110010":
+			return "2";
+			break;
+		case "00110011":
+			return "3";
+			break;
+		case "00110100":
+			return "4";
+			break;
+		case "00110101":
+			return "5";
+			break;
+		case "00110110":
+			return "6";
+			break;
+		case "00110111":
+			return "7";
+			break;
+		case "00111000":
+			return "8";
+			break;
+		case "00111001":
+			return "9";
+			break;
+		case "00111010":
+			return ":";
+			break;
+		case "00111011":
+			return ";";
+			break;
+		case "00111100":
+			return "<";
+			break;
+		case "00111101":
+			return "=";
+			break;
+		case "00111110":
+			return ">";
+			break;
+		case "00111111":
+			return "?";
+			break;
+		case "01000000":
+			return "@";
+			break;
+		case "01000001":
+			return "A";
+			break;
+		case "01000010":
+			return "B";
+			break;
+		case "01000011":
+			return "C";
+			break;
+		case "01000100":
+			return "D";
+			break;
+		case "01000101":
+			return "E";
+			break;
+		case "01000110":
+			return "F";
+			break;
+		case "01000111":
+			return "G";
+			break;
+		case "01001000":
+			return "H";
+			break;
+		case "01001001":
+			return "I";
+			break;
+		case "01001010":
+			return "J";
+			break;
+		case "01001011":
+			return "K";
+			break;
+		case "01001100":
+			return "L";
+			break;
+		case "01001101":
+			return "M";
+			break;
+		case "01001110":
+			return "N";
+			break;
+		case "01001111":
+			return "O";
+			break;
+		case "01010000":
+			return "P";
+			break;
+		case "01010001":
+			return "Q";
+			break;
+		case "01010010":
+			return "R";
+			break;
+		case "01010011":
+			return "S";
+			break;
+		case "01010100":
+			return "T";
+			break;
+		case "01010101":
+			return "U";
+			break;
+		case "01010110":
+			return "V";
+			break;
+		case "01010111":
+			return "W";
+			break;
+		case "01011000":
+			return "X";
+			break;
+		case "01011001":
+			return "Y";
+			break;
+		case "01011010":
+			return "Z";
+			break;
+		case "01011011":
+			return "[";
+			break;
+		case "01011100":
+			return "\\";
+			break;
+		case "01011101":
+			return "]";
+			break;
+		case "01011110":
+			return "^";
+			break;
+		case "01011111":
+			return "_";
+			break;
+		case "01100000":
+			return "`";
+			break;
+		case "01100001":
+			return "a";
+			break;
+		case "01100010":
+			return "b";
+			break;
+		case "01100011":
+			return "c";
+			break;
+		case "01100100":
+			return "d";
+			break;
+		case "01100101":
+			return "e";
+			break;
+		case "01100110":
+			return "f";
+			break;
+		case "01100111":
+			return "g";
+			break;
+		case "01101000":
+			return "h";
+			break;
+		case "01101001":
+			return "i";
+			break;
+		case "01101010":
+			return "j";
+			break;
+		case "01101011":
+			return "k";
+			break;
+		case "01101100":
+			return "l";
+			break;
+		case "01101101":
+			return "m";
+			break;
+		case "01101110":
+			return "n";
+			break;
+		case "01101111":
+			return "o";
+			break;
+		case "01110000":
+			return "p";
+			break;
+		case "01110001":
+			return "q";
+			break;
+		case "01110010":
+			return "r";
+			break;
+		case "01110011":
+			return "s";
+			break;
+		case "01110100":
+			return "t";
+			break;
+		case "01110101":
+			return "u";
+			break;
+		case "01110110":
+			return "v";
+			break;
+		case "01110111":
+			return "w";
+			break;
+		case "01111000":
+			return "x";
+			break;
+		case "01111001":
+			return "y";
+			break;
+		case "01111010":
+			return "z";
+			break;
+		case "01111011":
+			return "{";
+			break;
+		case "01111100":
+			return "|";
+			break;
+		case "01111101":
+			return "}";
+			break;
+		case "01111110":
+			return "~";
+			break;
+	}
+}
+
+function ascii_to_binary(character){
+	// Converts an ascii character to a binary encoded character.
 	switch(character){
 		case " ":
 			return "00100000";
@@ -292,10 +586,124 @@ function binary_encode_character(character){
 		case "~":
 			return "01111110";
 			break;
+	
+	}
+
+}
+
+function url_to_ascii(character){
+	// Converts an ascii character to a url encoded character.
+	switch(character){
+		case "%21" :
+			return "!";
+			break;
+		case "%22" :
+			return "\"";
+			break;
+		case "%23" :
+			return "#";
+			break;
+		case "%24" :
+			return "$";
+			break;
+		case "%25" :
+			return "%";
+			break;
+		case "%26" :
+			return "&";
+			break;
+		case "%27" :
+			return "'";
+			break;
+		case "%28" :
+			return "(";
+			break;
+		case "%29" :
+			return ")";
+			break;
+		case "%2A" :
+			return "*";
+			break;
+		case "%2B" :
+			return "+";
+			break;
+		case "%2C" :
+			return ",";
+			break;
+		case "%2D" :
+			return "-";
+			break;
+		case "%2E" :
+			return ".";
+			break;
+		case "%2F" :
+			return "/";
+			break;
+		case "%3A" :
+			return ":";
+			break;
+		case "%3B" :
+			return ";";
+			break;
+		case "%3C" :
+			return "<";
+			break;
+		case "%3D" :
+			return "=";
+			break;
+		case "%3E" :
+			return ">";
+			break;
+		case "%3F" :
+			return "?";
+			break;
+		case "%40" :
+			return "@";
+			break;
+		case "%5B" :
+			return "[";
+			break;
+		case "%5C" :
+			return "\\";
+			break;
+		case "%5D" :
+			return "]";
+			break;
+		case "%5E" :
+			return "^";
+			break;
+		case "%5F" :
+			return "_";
+			break;
+		case "%60" :
+			return "`";
+			break;
+		case "%7B" :
+			return "{";
+			break;
+		case "%7C" :
+			return "|";
+			break;
+		case "%7D" :
+			return "}";
+			break;
+		case "%7E" :
+			return "~";
+			break;
+		case "%20" :
+			return " ";
+			break;
+		case "%80" :
+			return "`";
+			break;
+		default: 
+			return character;
 	}
 }
-function url_encode_character(character){
-	// Converts an ASCII character to a URL encoded character.
+
+
+function ascii_to_url(character){
+	// Converts an ascii character to a url encoded character.
 	switch(character){
 		case "!":
 			return "%21" ;
@@ -401,23 +809,80 @@ function url_encode_character(character){
 			break;
 		default: 
 			return character;
-}}
+	}
+}
 
+// convert_from_url_encoding
 
 function convert_to_url_encoding(input_string){
-	// Converts a string to a URL encoded string
+	// Converts a string to a url encoded string
 //	var input_string = "!@#$%^&*()This is my input string!!!!";
 	var output_string = "";
 	for (var i = 0; i < input_string.length; i += 1){
 		var current_char = input_string[i];
-		current_char = url_encode_character(current_char);
+		current_char = ascii_to_url(current_char);
 		output_string = output_string + current_char;	
 	}
 	console.log(output_string);
 	return output_string;
 }
-// convert_to_url_encoding("Hello World!!!");
 
+
+function convert_from_url_encoding(input_string){
+	var output_string = input_string;
+	var urlmap = [["%21", "!"], ["%22", "\""], ["%23", "#"], ["%24", "$"],
+			["%25", "%"], ["%26", "&"], ["%27", "'"], ["%28", "("],
+			["%29", ")"], ["%2A", "*"], ["%2B", "+"], ["%2C", ","],
+			["%2D", "-"], ["%2E", "."], ["%2F", "/"], ["%3A", ":"],
+			["%3B", ";"], ["%3C", "<"], ["%3D", "="], ["%3E", ">"],
+			["%3F", "?"], ["%40", "@"], ["%5B", "["], ["%5C", "\\"],
+			["%5D", "]"], ["%5E", "^"], ["%5F", "_"], ["%60", "`"],
+			["%7B", "{"], ["%7C", "|"], ["%7D", "}"], ["%7E", "~"],
+			["%20", " "], ["%80", "`" ]]
+
+	for (var i = 0; i < urlmap.length; i = i + 1){
+		while (output_string.indexOf(urlmap[i][0]) !== -1){ // While there is a matching character, replace it with the original
+			console.log("Searching for " + urlmap[i]);
+			output_string = output_string.replace(urlmap[i][0], urlmap[i][1]);
+		}
+	}
+	return output_string;
+}
+
+function convert_from_binary_encoding(input_string){
+	var output_string = input_string;
+	var binarymap = [["00100000", " "], ["00100001", "!"], ["00100010", "\""], ["00100011", "#"],
+			 ["00100100", "$"], ["00100101", "%"], ["00100110", "&"], ["00100111", "'"],
+			 ["00101000", "("], ["00101001", ")"], ["00101010", "*"], ["00101011", "+"],
+			 ["00101100", ","], ["00101101", "-"], ["00101110", "."], ["00101111", "/"],
+			 ["00110000", "0"], ["00110001", "1"], ["00110010", "2"], ["00110011", "3"],
+			 ["00110100", "4"], ["00110101", "5"], ["00110110", "6"], ["00110111", "7"],
+			 ["00111000", "8"], ["00111001", "9"], ["00111010", ":"], ["00111011", ";"],
+			 ["00111100", "<"], ["00111101", "="], ["00111110", ">"], ["00111111", "?"],
+			 ["01000000", "@"], ["01000001", "A"], ["01000010", "B"], ["01000011", "C"],
+			 ["01000100", "D"], ["01000101", "E"], ["01000110", "F"], ["01000111", "G"],
+			 ["01001000", "H"], ["01001001", "I"], ["01001010", "J"], ["01001011", "K"],
+			 ["01001100", "L"], ["01001101", "M"], ["01001110", "N"], ["01001111", "O"],
+			 ["01010000", "P"], ["01010001", "Q"], ["01010010", "R"], ["01010011", "S"],
+			 ["01010100", "T"], ["01010101", "U"], ["01010110", "V"], ["01010111", "W"],
+			 ["01011000", "X"], ["01011001", "Y"], ["01011010", "Z"], ["01011011", "["],
+			 ["01011100", "\\"], ["01011101", "]"], ["01011110", "^"], ["01011111", "_"],
+			 ["01100000", "`"], ["01100001", "a"], ["01100010", "b"], ["01100011", "c"],
+			 ["01100100", "d"], ["01100101", "e"], ["01100110", "f"], ["01100111", "g"],
+			 ["01101000", "h"], ["01101001", "i"], ["01101010", "j"], ["01101011", "k"],
+			 ["01101100", "l"], ["01101101", "m"], ["01101110", "n"], ["01101111", "o"],
+			 ["01110000", "p"], ["01110001", "q"], ["01110010", "r"], ["01110011", "s"],
+			 ["01110100", "t"], ["01110101", "u"], ["01110110", "v"], ["01110111", "w"],
+			 ["01111000", "x"], ["01111001", "y"], ["01111010", "z"], ["01111011", "{"],
+			 ["01111100", "|"], ["01111101", "}"], ["01111110", "~"]];
+
+	for (var i = 0; i < binarymap.length; i = i + 1){
+		while (output_string.indexOf(binarymap[i][0] + " ") !== -1){ // While there is a matching character, replace it with the original
+			output_string = output_string.replace(binarymap[i][0] + " ", binarymap[i][1]);
+		}
+	}
+	return output_string;
+}
 
 
 function convert_to_binary_encoding(input_string){
@@ -426,37 +891,63 @@ function convert_to_binary_encoding(input_string){
 	var output_string = "";
 	for (var i = 0; i < input_string.length; i += 1){
 		var current_char = input_string[i];
-		current_char = binary_encode_character(current_char);
-		output_string = output_string + current_char;	
+		current_char = ascii_to_binary(current_char);
+		output_string = output_string + current_char + " ";
 	}
 	console.log(output_string);
 	return output_string;
 }
-function myfunction(){
-	
+function convert_from_ascii(){
 	var encoding_type = document.getElementById("drop_down").value; // document is getting referece for the value
-	var input_string = document.getElementById("input_textarea").value;
+	var input_string = document.getElementById("ascii_textarea").value;
 	var output_string = "";
-	if (encoding_type === "URL") {
+	if (encoding_type === "url") {
 		output_string = convert_to_url_encoding(input_string);
 	}
-	if (encoding_type === "BINARY") {
+	if (encoding_type === "binary") {
 		output_string = convert_to_binary_encoding(input_string);
 	}
-	document.getElementById("output_textarea").value = output_string;
+	document.getElementById("encoded_textarea").value = output_string;
 
 }
+function convert_to_ascii(){
+	var encoding_type = document.getElementById("drop_down").value; // document is getting referece for the value
+	var input_string = document.getElementById("encoded_textarea").value;
+	var output_string = "";
+	if (encoding_type === "url") {
+		output_string = convert_from_url_encoding(input_string);
+	}
+	if (encoding_type === "binary") {
+		output_string = convert_from_binary_encoding(input_string);
+	}
+	document.getElementById("ascii_textarea").value = output_string;
+}
+function test_list(){
+	var binarymap = [["00110000", "0"], ["00110001", "1"], ["00110010", "2"], ["00110011", "3"], ["00110100", "4"], ["00110101", "5"],
+			 ["01100001", "a"], ["01100010", "b"], ["01100011", "c"]];
+	var input = "00110001 00110010 00110011 00110100 00110101 01100001 01100010 01100011 ";
+	for (var i = 0; i < binarymap.length; i = i + 1){
+		console.log(i + ": binarymap: " + binarymap[i]);
+		input = input.replace(binarymap[i][0] + " ", binarymap[i][1]);
+	}
+	console.log("My output is: " + input);
+	console.log(binarymap);
+}
+
 
 </script>
+<style>
+
+</style>
 </head>
 <body>
-	<textarea id="input_textarea" onchange="myfunction()" onkeyup="myfunction()"></textarea>
-	<textarea id="output_textarea" onchange="myfunction()" onkeyup="myfunction()"></textarea>
+	<textarea id="ascii_textarea" onchange="convert_from_ascii()" onkeyup="convert_from_ascii()" cols="50" rows="10"></textarea>
+	<textarea id="encoded_textarea" onchange="convert_to_ascii()" onkeyup="convert_to_ascii()" ></textarea>
 <p><strong>choose your decrytion type.<br> 
 Then put in your code.</strong></p>
-<select id="drop_down"+value=URL >
-          <option value="URL">URL</option>
-          <option value="BINARY">BINARY</option>
+<select id="drop_down">
+          <option value="url">url</option>
+          <option value="binary">binary</option>
 </select>
 
 </body>

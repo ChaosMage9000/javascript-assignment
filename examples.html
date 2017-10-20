@@ -4,7 +4,298 @@
 <meta content="utf-8" http-equiv="encoding">
 <script>
 
-function convert_to_url_encoding(character){
+function binary_encode_character(character){
+	// Converts an ASCII character to a binary encoded character.
+	switch(character){
+		case " ":
+			return "00100000";
+			break;
+		case "!":
+			return "00100001";
+			break;
+		case "\"":
+			return "00100010";
+			break;
+		case "#":
+			return "00100011";
+			break;
+		case "$":
+			return "00100100";
+			break;
+		case "%":
+			return "00100101";
+			break;
+		case "&":
+			return "00100110";
+			break;
+		case "'":
+			return "00100111";
+			break;
+		case "(":
+			return "00101000";
+			break;
+		case ")":
+			return "00101001";
+			break;
+		case "*":
+			return "00101010";
+			break;
+		case "+":
+			return "00101011";
+			break;
+		case ",":
+			return "00101100";
+			break;
+		case "-":
+			return "00101101";
+			break;
+		case ".":
+			return "00101110";
+			break;
+		case "/":
+			return "00101111";
+			break;
+		case "0":
+			return "00110000";
+			break;
+		case "1":
+			return "00110001";
+			break;
+		case "2":
+			return "00110010";
+			break;
+		case "3":
+			return "00110011";
+			break;
+		case "4":
+			return "00110100";
+			break;
+		case "5":
+			return "00110101";
+			break;
+		case "6":
+			return "00110110";
+			break;
+		case "7":
+			return "00110111";
+			break;
+		case "8":
+			return "00111000";
+			break;
+		case "9":
+			return "00111001";
+			break;
+		case ":":
+			return "00111010";
+			break;
+		case ";":
+			return "00111011";
+			break;
+		case "<":
+			return "00111100";
+			break;
+		case "=":
+			return "00111101";
+			break;
+		case ">":
+			return "00111110";
+			break;
+		case "?":
+			return "00111111";
+			break;
+		case "@":
+			return "01000000";
+			break;
+		case "A":
+			return "01000001";
+			break;
+		case "B":
+			return "01000010";
+			break;
+		case "C":
+			return "01000011";
+			break;
+		case "D":
+			return "01000100";
+			break;
+		case "E":
+			return "01000101";
+			break;
+		case "F":
+			return "01000110";
+			break;
+		case "G":
+			return "01000111";
+			break;
+		case "H":
+			return "01001000";
+			break;
+		case "I":
+			return "01001001";
+			break;
+		case "J":
+			return "01001010";
+			break;
+		case "K":
+			return "01001011";
+			break;
+		case "L":
+			return "01001100";
+			break;
+		case "M":
+			return "01001101";
+			break;
+		case "N":
+			return "01001110";
+			break;
+		case "O":
+			return "01001111";
+			break;
+		case "P":
+			return "01010000";
+			break;
+		case "Q":
+			return "01010001";
+			break;
+		case "R":
+			return "01010010";
+			break;
+		case "S":
+			return "01010011";
+			break;
+		case "T":
+			return "01010100";
+			break;
+		case "U":
+			return "01010101";
+			break;
+		case "V":
+			return "01010110";
+			break;
+		case "W":
+			return "01010111";
+			break;
+		case "X":
+			return "01011000";
+			break;
+		case "Y":
+			return "01011001";
+			break;
+		case "Z":
+			return "01011010";
+			break;
+		case "[":
+			return "01011011";
+			break;
+		case "\\":
+			return "01011100";
+			break;
+		case "]":
+			return "01011101";
+			break;
+		case "^":
+			return "01011110";
+			break;
+		case "_":
+			return "01011111";
+			break;
+		case "`":
+			return "01100000";
+			break;
+		case "a":
+			return "01100001";
+			break;
+		case "b":
+			return "01100010";
+			break;
+		case "c":
+			return "01100011";
+			break;
+		case "d":
+			return "01100100";
+			break;
+		case "e":
+			return "01100101";
+			break;
+		case "f":
+			return "01100110";
+			break;
+		case "g":
+			return "01100111";
+			break;
+		case "h":
+			return "01101000";
+			break;
+		case "i":
+			return "01101001";
+			break;
+		case "j":
+			return "01101010";
+			break;
+		case "k":
+			return "01101011";
+			break;
+		case "l":
+			return "01101100";
+			break;
+		case "m":
+			return "01101101";
+			break;
+		case "n":
+			return "01101110";
+			break;
+		case "o":
+			return "01101111";
+			break;
+		case "p":
+			return "01110000";
+			break;
+		case "q":
+			return "01110001";
+			break;
+		case "r":
+			return "01110010";
+			break;
+		case "s":
+			return "01110011";
+			break;
+		case "t":
+			return "01110100";
+			break;
+		case "u":
+			return "01110101";
+			break;
+		case "v":
+			return "01110110";
+			break;
+		case "w":
+			return "01110111";
+			break;
+		case "x":
+			return "01111000";
+			break;
+		case "y":
+			return "01111001";
+			break;
+		case "z":
+			return "01111010";
+			break;
+		case "{":
+			return "01111011";
+			break;
+		case "|":
+			return "01111100";
+			break;
+		case "}":
+			return "01111101";
+			break;
+		case "~":
+			return "01111110";
+			break;
+	}
+}
+function url_encode_character(character){
+	// Converts an ASCII character to a URL encoded character.
 	switch(character){
 		case "!":
 			return "%21" ;
@@ -113,59 +404,60 @@ function convert_to_url_encoding(character){
 }}
 
 
-function my_for_loop_iterator(input_string){
+function convert_to_url_encoding(input_string){
+	// Converts a string to a URL encoded string
 //	var input_string = "!@#$%^&*()This is my input string!!!!";
 	var output_string = "";
 	for (var i = 0; i < input_string.length; i += 1){
 		var current_char = input_string[i];
-		current_char = convert_to_url_encoding(current_char);
+		current_char = url_encode_character(current_char);
 		output_string = output_string + current_char;	
 	}
 	console.log(output_string);
 	return output_string;
 }
-// my_for_loop_iterator("Hello World!!!");
+// convert_to_url_encoding("Hello World!!!");
 
+
+
+function convert_to_binary_encoding(input_string){
+	// Converts a string to a binary encoded string
+//	var input_string = "!@#$%^&*()This is my input string!!!!";
+	var output_string = "";
+	for (var i = 0; i < input_string.length; i += 1){
+		var current_char = input_string[i];
+		current_char = binary_encode_character(current_char);
+		output_string = output_string + current_char;	
+	}
+	console.log(output_string);
+	return output_string;
+}
 function myfunction(){
 	
 	var encoding_type = document.getElementById("drop_down").value; // document is getting referece for the value
+	var input_string = document.getElementById("input_textarea").value;
+	var output_string = "";
 	if (encoding_type === "URL") {
-		var input_string = document.getElementById("mytextarea").value;
-		input_string= my_for_loop_iterator(input_string);
-		document.getElementById("mytextarea2").value = input_string;
+		output_string = convert_to_url_encoding(input_string);
 	}
 	if (encoding_type === "BINARY") {
-	// TODO
-	
-	
-	
-}	
-	return
+		output_string = convert_to_binary_encoding(input_string);
+	}
+	document.getElementById("output_textarea").value = output_string;
+
 }
 
 </script>
-
 </head>
-
 <body>
-	<textarea id="mytextarea" onchange="myfunction()" onkeyup="myfunction()">
-
-</textarea>
-
-	<textarea id="mytextarea2" onchange="myfunction()" onkeyup="myfunction()">
-
-</textarea>
-<p><strong>choose your decrytion type.<br>
+	<textarea id="input_textarea" onchange="myfunction()" onkeyup="myfunction()"></textarea>
+	<textarea id="output_textarea" onchange="myfunction()" onkeyup="myfunction()"></textarea>
+<p><strong>choose your decrytion type.<br> 
 Then put in your code.</strong></p>
-
 <select id="drop_down"+value=URL >
           <option value="URL">URL</option>
           <option value="BINARY">BINARY</option>
 </select>
-
-
-
-
 
 </body>
 </html>
